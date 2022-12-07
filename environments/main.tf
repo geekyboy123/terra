@@ -17,16 +17,16 @@
 module "service_account" {
   source     = "terraform-google-modules/service-accounts/google"
   version    = "~> 4.1.1"
-  project_id = var.project_id
+  project_id = var.cloud_run_object.project_id
   prefix     = "sa-cloud-run"
   names      = ["simple"]
 }
 
 module "cloud_run" {
   source = "../modules/"
-  service_name           = var.service_name
-  project_id             = var.project_id
-  location               = var.location
-  image                  = var.image
-  service_account_email  = var.cloud_run_sa
+  service_name           = var.cloud_run_object.service_name
+  project_id             = var.cloud_run_object.project_id
+  location               = var.cloud_run_object.location
+  image                  = var.cloud_run_object.image
+  service_account_email  = var.cloud_run_object.cloud_run_sa
 }

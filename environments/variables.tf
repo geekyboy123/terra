@@ -6,7 +6,10 @@ variable "cloud_run_object" {
     service_name  = string
     image         = string
     cloud_run_sa  = string
+    template_annotations = map(string)
+    
   }
  )
 }
 
+:

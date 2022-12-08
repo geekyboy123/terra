@@ -29,4 +29,5 @@ module "cloud_run" {
   location               = var.cloud_run_object.location
   image                  = var.cloud_run_object.image
   service_account_email  = var.cloud_run_object.cloud_run_sa
+  template_annotations   = var.cloud_run_object.template_annotations
 }

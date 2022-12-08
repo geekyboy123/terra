@@ -79,12 +79,6 @@ variable "template_labels" {
 variable "template_annotations" {
   type        = map(string)
   description = "Annotations to the container metadata including VPC Connector and SQL. See [more details](https://cloud.google.com/run/docs/reference/rpc/google.cloud.run.v1#revisiontemplate)"
-  default = {
-    "run.googleapis.com/client-name"   = "terraform"
-    "generated-by"                     = "terraform"
-    "autoscaling.knative.dev/maxScale" = 2
-    "autoscaling.knative.dev/minScale" = 1
-  }
 }
 
 variable "encryption_key" {

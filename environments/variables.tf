@@ -12,4 +12,3 @@ variable "cloud_run_object" {
  )
 }
 
-:

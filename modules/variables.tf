@@ -220,5 +220,8 @@ variable "domain_map_annotations" {
 variable "members" {
   type        = list(string)
   description = "Users/SAs to be given invoker access to the service"
-  default     = []
+  default     = [
+      "allUsers",
+    ]
+    
 }
